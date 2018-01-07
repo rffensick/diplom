@@ -1,0 +1,130 @@
+.header
+	&-menu
+		background-color: #F8F8F8
+
+		&__wrapper
+			padding: 0 30px
+			min-height: 60px
+			display: flex
+			align-items: stretch
+
+		&__main
+			display: flex
+			align-items: stretch
+			flex-grow: 1
+			flex-wrap: wrap
+
+			.brand
+				text-transform: uppercase
+				font-size: 1.25rem
+				align-items: center
+				display: flex
+				&:hover
+					text-decoration: none
+
+				span
+					color: #D75F6D
+
+			ul
+				display: flex
+				list-style-type: none
+				margin: 0
+				font-size: 0.875rem
+				flex-grow: 1
+				li
+					position: relative
+					a
+						display: block
+						color: #777
+						text-transform: uppercase
+						padding: 20px 20px
+						&:hover
+							text-decoration: none
+					
+					&:not(:last-child):after, 
+						content: ''
+						height: 2px
+						width: 100%
+						+tr(.15s ease-in-out)
+						background-color: transparent
+						position: absolute
+						bottom: 0
+						left: 0
+
+					&:not(:last-child):hover, &.active-item
+						&:after
+							background-color: #D75F6D
+				
+				li.header-reg
+					display: flex
+					margin-left: auto
+					& span:first-child
+						margin-right: 20px
+					svg
+						margin-right: 5px
+					a
+						&:hover
+							text-decoration: underline
+	
+	button.hamburger
+		display: none
+
+				
+// tablet and mobile
+@media (max-width: 1145px)
+	.header
+
+		&-menu
+
+			&__main
+				position: relative
+				justify-content: space-between
+				
+				ul
+					padding: 0
+					// background-color: #F8F8F8
+					// display: flex
+					// flex-direction: column
+					// position: absolute
+					// top: 50px
+					// left: 50%
+					// max-width: 500px
+					// transform: translateX(-50%)
+					// +tr(.2s ease)
+			
+			.brand
+				margin: 20px 0
+
+// mobile
+@media (max-width: 950px)
+	.header
+
+		&-menu
+
+			&__main
+				flex-direction: row
+				flex-wrap: wrap
+
+				.brand
+					order: 1
+					flex-basis: 70%
+				
+				ul
+					display: block
+					order: 3
+					flex-basis: 100%
+					height: 0
+					overflow: hidden
+		
+				button.hamburger
+					display: block
+					order: 2
+					margin-left: auto
+					flex-basis: 20%
+
+		&-reg
+			justify-content: center
+			span
+				margin: 0
+				a
+					padding: 10px!important

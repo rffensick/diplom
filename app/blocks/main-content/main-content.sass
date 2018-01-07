@@ -1,0 +1,107 @@
+.main-content
+
+  &__wrapper
+    +container-desktop
+    background-color: #fff
+    padding: 15px 30px
+    display: flex
+    flex-wrap: wrap
+    font-size: 0.875rem
+
+    .navigation.sidebar
+      flex-basis: 20%
+
+  &__heading
+    color: #fff
+    background-color: #609FD9
+    display: inline-block
+    margin: 5px 0
+    padding: 7px
+    font-size: 0.8rem
+
+  &__box
+    flex-basis: 80%
+
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+    .col-1
+      flex-basis: 33%
+      padding: 0 20px
+      h2 
+        color: #545454
+        margin-bottom: 3px
+
+      p
+        margin: 0
+        color: #777
+
+  &__info-button
+    display: inline-block
+    background-color: #609FD9
+    padding: 5px 15px
+    color: #fff
+    margin-top: 20px
+    &:hover
+      color: #fff
+
+  .sidebar-title
+    font-size: 1rem
+    margin: 5px 0
+    display: inline-block
+
+  &__under-grid-heading
+    line-height: 1
+    color: #545454
+    margin-bottom: 10px
+    margin-top: 30px
+
+  &__under-grid-content
+    color: #777
+
+  .navigation.sidebar
+    ul
+      margin: 0
+      padding: 0
+      list-style: none
+      display: flex
+      flex-direction: column
+      
+      li
+        border-bottom: 1px solid #DFDFDF
+        position: relative
+        padding-left: 10px
+        &:before
+          content: ""
+          position: absolute
+          top: 11px
+          left: 0
+          border-top: 4px solid transparent
+          border-bottom: 4px solid transparent
+          border-left: 4px solid #777
+
+        a
+          display: block
+          padding: 5px 0
+
+
+
+@media (max-width: 1205px)
+  .main-content
+
+    &__wrapper
+
+      .navigation.sidebar
+        display: none
+
+    &__box
+      flex: 1 1 auto
+
+    &__grid
+      .col-1
+        flex-basis: 100%
+
+
+
