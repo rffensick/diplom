@@ -1,16 +1,5 @@
-include mixins/mixins
-include ./settings/settings.pug
+extends ./layout/index.pug
 
-<!DOCTYPE html>
-html(lang="ru")
-	head
-		+settings("Dual Education")
-	body
-		include ./blocks/header/header.pug
-		include ./blocks/main-content/main-content.pug
-		
-		link(rel="stylesheet" href="css/main.min.css")
-		script(src="js/scripts.min.js")
-		//- SVG
-		include mixins/sprite
+block content
+	include ./blocks/main-content/main-content.pug
 	

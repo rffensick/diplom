@@ -1,0 +1,17 @@
+section.sign-in
+	.sign-in__wrapper
+		header.brand-wrapper
+			a(href="/").brand
+				| Dual
+				span Education
+		.sign-in__content
+			form.sign-in__body
+				label.login-field Имя или электронная почта: 
+				input(type="text" id="login-field" name="login-field" ).form-control
+
+				label.password-field Пароль:
+					a(href="#").forgot-password Забыли пароль?
+				input(type="text" id="password-field" name="password-field" ).form-control
+
+				button.btn.btn-success Войти
+

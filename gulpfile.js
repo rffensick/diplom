@@ -129,7 +129,7 @@ gulp.task('pug', function() {
 
 gulp.task('watch', ['sass', 'js', 'pug', 'browser-sync'], function() {
 	gulp.watch(['app/blocks/**/*.sass', 'app/sass/**/*.sass'], ['sass']);
-	gulp.watch(['app/*.pug', 'app/blocks/**/*.pug', 'app/settings/settings.pug', 'app/mixins/*.pug'], ['pug']);
+	gulp.watch(['app/*.pug', 'app/blocks/**/*.pug', 'app/settings/settings.pug', 'app/mixins/*.pug', 'app/layout/*.pug'], ['pug']);
 	gulp.watch(['app/libs/**/*.js', 'app/js/common.js'], ['js']);
 });
 

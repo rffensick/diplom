@@ -1,16 +1,5 @@
-include mixins/mixins
-include settings/settings.pug
+extends ./layout/index.pug
 
-<!DOCTYPE html>
-html(lang="ru")
-	head
-		+settings("ЕНТ ОНЛАЙН")
-	body
-		include ./blocks/header/header.pug
-		include ./blocks/ent-online-content/ent-online-content.pug
-		
-		link(rel="stylesheet" href="css/bootstrap.min.css")
-		link(rel="stylesheet" href="css/main.min.css")
-		//- SVG
-		include mixins/sprite
+block content
+	include ./blocks/ent-online-content/ent-online-content.pug
 	
