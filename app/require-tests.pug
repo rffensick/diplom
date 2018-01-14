@@ -1,17 +1,16 @@
 include mixins/mixins
-include ./settings/settings.pug
+include settings/settings.pug
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
-		+settings("DE | ТЕСТЫ")
+		+settings("ЕНТ ОНЛАЙН")
 	body
 		include ./blocks/header/header.pug
-		include ./blocks/tests-content/tests-content.pug
-		
+		include ./blocks/ent-online-content/ent-online-content.pug
 		
 		link(rel="stylesheet" href="css/bootstrap.min.css")
 		link(rel="stylesheet" href="css/main.min.css")
-		script(src="js/scripts.min.js")
 		//- SVG
 		include mixins/sprite
+	
